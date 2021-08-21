@@ -9,7 +9,7 @@ utils.map('n', 'tt', ':t.<CR>')
 utils.map('n', 'j', 'gj')
 utils.map('n', 'k', 'gk')
 -- Eliminar buffer
-utils.map('n', '<leader>d', ':bd<CR>')
+utils.map('n', '<leader>d', ':bp | bd #<CR>')
 -- Guardar buffer
 utils.map('n', '<F1>', ':w<CR>')
 utils.map('i', '<F1>', '<C-o>:w<CR>')
@@ -30,4 +30,7 @@ utils.map('n', '<leader>i', '<cmd>Telescope buffers<CR>')
 -- Bufferline
 utils.map('n', 'gb', ':BufferLinePick<CR>')
 -- Nvimtree
-utils.map('n', '<leader>e', ':NvimTreeToggle<CR>')
+utils.map('n', '<C-n>', ':NvimTreeToggle<CR>')
+-- Nvim comment
+utils.map('n', '<leader>/', ':CommentToggle<CR>')
+utils.map('v', '<leader>/', ':CommentToggle<CR>')

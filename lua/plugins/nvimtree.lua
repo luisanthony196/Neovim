@@ -3,7 +3,7 @@ local tree_c = require('nvim-tree.config')
 local tree_cb = tree_c.nvim_tree_callback
 local g = vim.g
 
-g.nvim_tree_side = "left"
+g.nvim_tree_side = "right"
 g.nvim_tree_width = 25
 g.nvim_tree_ignore = {".git", "node_modules", ".cache"}
 g.nvim_tree_gitignore = 1
@@ -25,7 +25,7 @@ g.nvim_tree_hijack_netrw = 0
 g.nvim_tree_update_cwd = 1
 
 g.nvim_tree_show_icons = {
-    git = 1,
+    -- git = 1,
     folders = 1,
     files = 1
     -- folder_arrows= 1
@@ -66,7 +66,7 @@ g.nvim_tree_bindings = {
     {key = "P", cb = tree_cb("parent_node")},
     {key = "<BS>", cb = tree_cb("close_node")},
     {key = "<S-CR>", cb = tree_cb("close_node")},
-    {key = "<Tab>", cb = tree_cb("preview")},
+    -- {key = "<Tab>", cb = tree_cb("preview")},
     {key = "K", cb = tree_cb("first_sibling")},
     {key = "J", cb = tree_cb("last_sibling")},
     {key = "I", cb = tree_cb("toggle_ignored")},
@@ -86,6 +86,7 @@ g.nvim_tree_bindings = {
     {key = "}c", cb = tree_cb("next_git_item")},
     {key = "-", cb = tree_cb("dir_up")},
     {key = "q", cb = tree_cb("close")},
+    {key = "<leader>d", cb = tree_cb("close")},
     {key = "g?", cb = tree_cb("toggle_help")}
 }
 

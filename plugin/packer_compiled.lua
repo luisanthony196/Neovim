@@ -81,6 +81,22 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
   },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-comment"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+  },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"

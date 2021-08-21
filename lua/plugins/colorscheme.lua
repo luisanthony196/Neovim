@@ -1,7 +1,6 @@
-local utils = require('utils')
 local cmd = vim.cmd
 
-utils.opt('o', 'termguicolors', true)
+vim.o.termguicolors = true
 cmd 'colorscheme sonokai'
 
 vim.g.sonokai_style = 'andromeda'
