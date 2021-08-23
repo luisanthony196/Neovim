@@ -69,19 +69,24 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["auto-pairs"] = {
+  LuaSnip = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/auto-pairs"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/LuaSnip"
+  },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/bufferline.nvim"
   },
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/home/linux/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
-  ["nvim-bufferline.lua"] = {
+  ["nvim-autopairs"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-comment"] = {
+    config = { "\27LJ\2\nE\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\fcomment\26plugins.config.others\frequire\0" },
     loaded = true,
     path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
@@ -114,6 +119,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/linux/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
+  ["registers.nvim"] = {
+    config = { "\27LJ\2\nG\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14registers\26plugins.config.others\frequire\0" },
+    loaded = true,
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/registers.nvim"
+  },
   sonokai = {
     loaded = true,
     path = "/home/linux/.local/share/nvim/site/pack/packer/start/sonokai"
@@ -121,14 +131,18 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/linux/.local/share/nvim/site/pack/packer/start/telescope.nvim"
-  },
-  ["vim-peekaboo"] = {
-    loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/vim-peekaboo"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-comment
+time([[Config for nvim-comment]], true)
+try_loadstring("\27LJ\2\nE\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\fcomment\26plugins.config.others\frequire\0", "config", "nvim-comment")
+time([[Config for nvim-comment]], false)
+-- Config for: registers.nvim
+time([[Config for registers.nvim]], true)
+try_loadstring("\27LJ\2\nG\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14registers\26plugins.config.others\frequire\0", "config", "registers.nvim")
+time([[Config for registers.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

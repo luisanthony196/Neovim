@@ -2,6 +2,7 @@ local utils = require('utils')
 
 -- Global options
 utils.opt('o', 'clipboard', 'unnamedplus')
+utils.opt('o', 'completeopt', 'menuone,noselect')
 utils.opt('o', 'hidden', true)
 utils.opt('o', 'lazyredraw', true)
 utils.opt('o', 'splitbelow', true)

@@ -8,7 +8,7 @@ M.comment = function()
 end
 
 M.registers  = function()
-  local present, registers = pcall(require, "registers")
+  local present, _ = pcall(require, "registers")
   if present then
     vim.g["registers_window_max_width"] = 30
   end

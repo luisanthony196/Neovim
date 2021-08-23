@@ -1,9 +1,8 @@
 -- List of files to load
 local chad_modules = {
    "settings",
-   "pluginList",
+   "plugins",
    "keymappings",
-   "plugins"
 }
 -- Load lua files
 for i = 1, #chad_modules, 1 do
@@ -11,3 +10,13 @@ for i = 1, #chad_modules, 1 do
       error("Error loading " .. chad_modules[i] .. "\n")
    end
 end
+
+require('plugins.config.colorscheme')
+require('plugins.config.bufferline')
+require('plugins.config.nvimtree')
+require('plugins.config.statusline')
+require('plugins.config.lspconfig')
+require('plugins.config.compe')
+require('plugins.config.autopairs')
+require('plugins.config.luasnip')
+
