@@ -8,12 +8,14 @@ utils.opt('o', 'lazyredraw', true)
 utils.opt('o', 'splitbelow', true)
 utils.opt('o', 'splitright', true)
 utils.opt('o', 'pumheight', 10)
+utils.opt('o', 'ignorecase', true)
 
 -- Window-scoped options
 utils.opt('w', 'number', false)
 utils.opt('w', 'relativenumber', true)
 utils.opt('w', 'wrap', true)
 utils.opt('w', 'linebreak', true)
+utils.opt('w', 'numberwidth', 2)
 
 -- Buffer-scoped options
 utils.opt('b', 'expandtab', true)

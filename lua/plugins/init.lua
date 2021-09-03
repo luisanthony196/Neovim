@@ -26,7 +26,8 @@ return packer.startup(function()
     requires = {"nvim-web-devicons"}
   }
   -- Color scheme
-  use {"sainnhe/sonokai"}
+  -- use {"sainnhe/sonokai"}
+  use {"folke/tokyonight.nvim"}
   -- Easy install lsp
   use {"kabouzeid/nvim-lspinstall"}
   -- Lsp configuration
@@ -60,6 +61,13 @@ return packer.startup(function()
     "tversteeg/registers.nvim",
     config = function ()
       require("plugins.config.others").registers()
+    end
+  }
+  --Tmux
+  use {
+    "aserowy/tmux.nvim",
+    config = function ()
+      require("plugins.config.others").tmux()
     end
   }
 end)

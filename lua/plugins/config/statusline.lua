@@ -1,36 +1,5 @@
 local gl = require('galaxyline')
-local colors = {
-    white = "#abb2bf",
-    darker_black = "#1b1f27",
-    black = "#1e222a", --  nvim bg
-    black2 = "#252931",
-    one_bg = "#282c34", -- real bg of onedark
-    one_bg2 = "#353b45",
-    one_bg3 = "#30343c",
-    grey = "#42464e",
-    grey_fg = "#565c64",
-    grey_fg2 = "#6f737b",
-    light_grey = "#6f737b",
-    red = "#d47d85",
-    baby_pink = "#DE8C92",
-    pink = "#ff75a0",
-    line = "#2a2e36", -- for lines like vertsplit
-    green = "#A3BE8C",
-    vibrant_green = "#7eca9c",
-    nord_blue = "#81A1C1",
-    blue = "#61afef",
-    yellow = "#e7c787",
-    sun = "#EBCB8B",
-    purple = "#b4bbc8",
-    dark_purple = "#c882e7",
-    teal = "#519ABA",
-    orange = "#fca2aa",
-    cyan = "#a3b8ef",
-    -- statusline_bg = "#22262e",
-    lightbg = "#2d3139",
-    lightbg2 = "#262a32"
-}
-
+local colors = require("tokyonight.colors").setup({})
 local condition = require('galaxyline.condition')
 local gls = gl.section
 
@@ -41,7 +10,7 @@ gls.left[1] = {
     provider = function()
       return "▋"
     end,
-    highlight = {colors.nord_blue, colors.nord_blue}
+    highlight = {colors.blue5, colors.blue5}
   }
 }
 
@@ -50,9 +19,9 @@ gls.left[2] = {
     provider = function()
       return "  "
     end,
-    highlight = {colors.statusline_bg, colors.nord_blue},
+    highlight = {colors.bg, colors.blue5},
     separator = "  ",
-    separator_highlight = {colors.nord_blue, colors.lightbg}
+    separator_highlight = {colors.blue5, colors.bg_highlight}
   }
 }
 
@@ -60,7 +29,7 @@ gls.left[3] = {
   FileIcon = {
     provider = "FileIcon",
     condition = condition.buffer_not_empty,
-    highlight = {colors.white, colors.lightbg}
+    highlight = {colors.fg, colors.bg_highlight}
   }
 }
 
@@ -68,9 +37,9 @@ gls.left[4] = {
   FileName = {
     provider = {"FileName"},
     condition = condition.buffer_not_empty,
-    highlight = {colors.white, colors.lightbg},
+    highlight = {colors.fg, colors.bg_highlight},
     separator = " ",
-    separator_highlight = {colors.lightbg, colors.lightbg2}
+    separator_highlight = {colors.bg_highlight, colors.bg_dark}
   }
 }
 
@@ -80,9 +49,9 @@ gls.left[5] = {
       local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
       return "  " .. dir_name .. " "
     end,
-    highlight = {colors.grey_fg2, colors.lightbg2},
+    highlight = {colors.fg_dark, colors.bg_dark},
     separator = " ",
-    separator_highlight = {colors.lightbg2, colors.statusline_bg}
+    separator_highlight = {colors.bg_dark, colors.none}
   }
 }
 
@@ -99,7 +68,7 @@ gls.left[6] = {
     provider = "DiffAdd",
     condition = checkwidth,
     icon = "  ",
-    highlight = {colors.white, colors.statusline_bg}
+    highlight = {colors.fg, colors.none}
   }
 }
 
@@ -108,7 +77,7 @@ gls.left[7] = {
     provider = "DiffModified",
     condition = checkwidth,
     icon = "   ",
-    highlight = {colors.grey_fg2, colors.statusline_bg}
+    highlight = {colors.fg_dark, colors.none}
   }
 }
 
@@ -117,7 +86,7 @@ gls.left[8] = {
     provider = "DiffRemove",
     condition = checkwidth,
     icon = "  ",
-    highlight = {colors.grey_fg2, colors.statusline_bg}
+    highlight = {colors.fg_dark, colors.none}
   }
 }
 
@@ -125,7 +94,7 @@ gls.left[9] = {
   DiagnosticError = {
     provider = "DiagnosticError",
     icon = "  ",
-    highlight = {colors.red, colors.statusline_bg}
+    highlight = {colors.red, colors.none}
   }
 }
 
@@ -133,7 +102,7 @@ gls.left[10] = {
   DiagnosticWarn = {
     provider = "DiagnosticWarn",
     icon = "  ",
-    highlight = {colors.yellow, colors.statusline_bg}
+    highlight = {colors.yellow, colors.none}
   }
 }
 
@@ -154,7 +123,7 @@ gls.right[1] = {
         return ""
       end
     end,
-    highlight = {colors.grey_fg2, colors.statusline_bg}
+    highlight = {colors.fg_gutter, colors.none}
   }
 }
 
@@ -164,9 +133,9 @@ gls.right[2] = {
       return " "
     end,
     condition = require("galaxyline.condition").check_git_workspace,
-    highlight = {colors.grey_fg2, colors.statusline_bg},
-    separator = " ",
-    separator_highlight = {colors.statusline_bg, colors.statusline_bg}
+    highlight = {colors.fg_dark, colors.bg_dark},
+    separator = "",
+    separator_highlight = {colors.bg_dark, colors.none}
   }
 }
 
@@ -174,7 +143,7 @@ gls.right[3] = {
   GitBranch = {
     provider = "GitBranch",
     condition = require("galaxyline.condition").check_git_workspace,
-    highlight = {colors.grey_fg2, colors.statusline_bg}
+    highlight = {colors.fg_dark, colors.bg_dark}
   }
 }
 
@@ -183,9 +152,9 @@ gls.right[4] = {
     provider = function()
       return " "
     end,
-    highlight = {colors.statusline_bg, colors.red},
+    highlight = {colors.bg, colors.red},
     separator = " ",
-    separator_highlight = {colors.red, colors.statusline_bg}
+    separator_highlight = {colors.red, colors.bg_dark}
   }
 }
 
@@ -209,7 +178,8 @@ gls.right[5] = {
         return "  " .. current_Mode .. " "
       end
     end,
-    highlight = {colors.red, colors.lightbg}
+    highlight = {colors.red, colors.bg_highlight}
+    -- highlight = {colors.red, colors.lightbg}
   }
 }
 
@@ -219,8 +189,10 @@ gls.right[6] = {
       return " "
     end,
     separator = "",
-    separator_highlight = {colors.green, colors.lightbg},
-    highlight = {colors.lightbg, colors.green}
+    separator_highlight = {colors.green, colors.bg_highlight},
+    -- separator_highlight = {colors.green, colors.lightbg},
+    highlight = {colors.bg_highlight, colors.green}
+    -- highlight = {colors.lightbg, colors.green}
   }
 }
 
@@ -238,6 +210,7 @@ gls.right[7] = {
       local result, _ = math.modf((current_line / total_line) * 100)
       return "  " .. result .. "% "
     end,
-    highlight = {colors.green, colors.lightbg}
+    highlight = {colors.green, colors.bg_highlight}
+    -- highlight = {colors.green, colors.lightbg}
   }
 }

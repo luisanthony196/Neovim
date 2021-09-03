@@ -5,7 +5,9 @@ vim.g.mapleader = ' '
 
 -- Duplicar lineas
 utils.map('n', 'tt', ':t.<CR>')
--- Caminar por lineas wrapeadas
+-- Insertar ;
+utils.map('i', '<A-;>', '<C-o>A;')
+-- Caminar por klineas wrapeadas
 utils.map('n', 'j', 'gj')
 utils.map('n', 'k', 'gk')
 -- Eliminar buffer

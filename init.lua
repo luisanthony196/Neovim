@@ -11,6 +11,7 @@ for i = 1, #chad_modules, 1 do
    end
 end
 
+require('core.autocmd')
 require('plugins.config.colorscheme')
 require('plugins.config.bufferline')
 require('plugins.config.nvimtree')
@@ -19,4 +20,3 @@ require('plugins.config.lspconfig')
 require('plugins.config.compe')
 require('plugins.config.autopairs')
 require('plugins.config.luasnip')
-
