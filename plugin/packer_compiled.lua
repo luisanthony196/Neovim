@@ -133,13 +133,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/linux/.local/share/nvim/site/pack/packer/start/tmux.nvim"
   },
-  ["tokyonight.vim"] = {
+  ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/tokyonight.vim"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: registers.nvim
+time([[Config for registers.nvim]], true)
+try_loadstring("\27LJ\2\nG\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14registers\26plugins.config.others\frequire\0", "config", "registers.nvim")
+time([[Config for registers.nvim]], false)
 -- Config for: nvim-comment
 time([[Config for nvim-comment]], true)
 try_loadstring("\27LJ\2\nE\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\fcomment\26plugins.config.others\frequire\0", "config", "nvim-comment")
@@ -148,10 +152,6 @@ time([[Config for nvim-comment]], false)
 time([[Config for tmux.nvim]], true)
 try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\ttmux\26plugins.config.others\frequire\0", "config", "tmux.nvim")
 time([[Config for tmux.nvim]], false)
--- Config for: registers.nvim
-time([[Config for registers.nvim]], true)
-try_loadstring("\27LJ\2\nG\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14registers\26plugins.config.others\frequire\0", "config", "registers.nvim")
-time([[Config for registers.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
