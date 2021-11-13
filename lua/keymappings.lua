@@ -18,8 +18,8 @@ utils.map('i', '<F1>', '<C-o>:w<CR>')
 -- Cerrar neovim
 utils.map('n', '<F2>', ':q<CR>')
 -- Moverse entre buffers
-utils.map('n', '<TAB>', ':bn<CR>')
-utils.map('n', '<S-TAB>', ':bp<CR>')
+utils.map('n', '<TAB>', ':BufferLineCycleNext<CR>')
+utils.map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>')
 -- Moverse entre ventanas
 utils.map('n', '<C-h>', '<C-w><C-h>')
 utils.map('n', '<C-j>', '<C-w><C-j>')

@@ -71,71 +71,87 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/LuaSnip"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["bufferline.nvim"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/bufferline.nvim"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["galaxyline.nvim"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
+    url = "https://github.com/glepnir/galaxyline.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-comment"] = {
     config = { "\27LJ\2\nE\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\fcomment\26plugins.config.others\frequire\0" },
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-comment"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-compe",
+    url = "https://github.com/hrsh7th/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
+    url = "https://github.com/kabouzeid/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/opt/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["registers.nvim"] = {
     config = { "\27LJ\2\nG\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14registers\26plugins.config.others\frequire\0" },
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/registers.nvim"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/registers.nvim",
+    url = "https://github.com/tversteeg/registers.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tmux.nvim"] = {
     config = { "\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\ttmux\26plugins.config.others\frequire\0" },
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/tmux.nvim"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/tmux.nvim",
+    url = "https://github.com/aserowy/tmux.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/home/linux/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+    path = "/home/linux/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   }
 }
 

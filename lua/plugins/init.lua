@@ -52,10 +52,10 @@ return packer.startup(function()
   -- Explorer
   use {"kyazdani42/nvim-tree.lua"}
   -- Fuzzi finder
-  use {
-    "nvim-telescope/telescope.nvim",
-    requires = {"nvim-lua/plenary.nvim"}
-  }
+  -- use {
+  --   "nvim-telescope/telescope.nvim",
+  --   requires = {"nvim-lua/plenary.nvim"}
+  -- }
   -- View registers
   use {
     "tversteeg/registers.nvim",
